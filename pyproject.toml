@@ -40,6 +40,12 @@ dev = ["pytest", "pytest-cov", "black", "ruff"]
 [project.scripts]
 audio-stretch = "audio_stretch.cli:main"
 
+[project.urls]
+Homepage = "https://github.com/ntamvl/audio-stretch"
+Repository = "https://github.com/ntamvl/audio-stretch.git"
+Documentation = "https://github.com/ntamvl/audio-stretch#readme"
+"Bug Tracker" = "https://github.com/ntamvl/audio-stretch/issues"
+
 [tool.setuptools.packages.find]
 where = ["."]
 # include = ["audio_stretch*"]
