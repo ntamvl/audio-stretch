@@ -28,7 +28,7 @@ from audio_stretch.core import AudioStretcher
 from audio_stretch.tts import VoxCPMTTS
 from audio_stretch.utils import get_audio_info, stretch_file
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 __author__ = "audio_stretch contributors"
 __all__ = [
     # dataclasses / enums
