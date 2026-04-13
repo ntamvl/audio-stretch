@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "audio-stretch"
+version = "1.0.0"
+description = "Thay đổi chiều dài âm thanh mà không mất nội dung, tích hợp VoxCPM2 TTS."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+
+dependencies = [
+    "soundfile>=0.12",
+    "numpy>=1.24",
+]
+
+[project.optional-dependencies]
+# Thuật toán chất lượng cao (khuyến nghị)
+rubberband = ["pyrubberband>=0.3"]
+# Thuật toán fallback
+librosa = ["librosa>=0.10"]
+# TTS integration
+tts = ["voxcpm"]
+# Toàn bộ
+all = ["pyrubberband>=0.3", "librosa>=0.10", "voxcpm"]
+# Dev / test
+dev = ["pytest", "pytest-cov", "black", "ruff"]
+
+[project.scripts]
+audio-stretch = "audio_stretch.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["audio_stretch*"]
