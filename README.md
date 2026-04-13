@@ -38,6 +38,11 @@ pip install -e .
 pip install -e ".[rubberband,tts]"
 ```
 
+**After installation, quick check:**
+```py
+python -c "import audio_stretch; print(audio_stretch.__version__)"
+```
+
 > **Lưu ý:** `pyrubberband` yêu cầu cài thêm binary `rubberband-cli`:
 > ```bash
 > # Ubuntu / Debian
