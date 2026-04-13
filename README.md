@@ -27,6 +27,15 @@ pip install "audio-stretch[tts]"
 
 # Tất cả tính năng
 pip install "audio-stretch[all]"
+
+# Cài đặt từ source
+pip install git+https://github.com/ntamvl/audio-stretch
+
+# hoặc
+git clone https://github.com/ntamvl/audio-stretch && cd audio-stretch
+pip install -e .
+# hoặc với dependencies đầy đủ
+pip install -e ".[rubberband,tts]"
 ```
 
 > **Lưu ý:** `pyrubberband` yêu cầu cài thêm binary `rubberband-cli`:

@@ -1,6 +1,6 @@
 [build-system]
-requires = ["setuptools>=68", "wheel"]
-build-backend = "setuptools.backends.legacy:build"
+requires = ["setuptools>=68", "wheel", "setuptools_scm>=8"]
+build-backend = "setuptools.build_meta"
 
 [project]
 name = "audio-stretch"
@@ -9,7 +9,13 @@ description = "Thay đổi chiều dài âm thanh mà không mất nội dung, t
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "MIT" }
-
+authors = [
+    {name = "Tam Nguyen", email = "ntamvl@gmail.com"}
+]
+maintainers = [
+    {name = "Tam Nguyen", email = "ntamvl@gmail.com"}
+]
+keywords = ["audio-stretch", "voxcpm", "text-to-speech", "tts", "speech-synthesis", "voice-cloning", "ai", "deep-learning", "pytorch"]
 dependencies = [
     "soundfile>=0.12",
     "numpy>=1.24",
@@ -18,12 +24,16 @@ dependencies = [
 [project.optional-dependencies]
 # Thuật toán chất lượng cao (khuyến nghị)
 rubberband = ["pyrubberband>=0.3"]
+
 # Thuật toán fallback
 librosa = ["librosa>=0.10"]
+
 # TTS integration
 tts = ["voxcpm"]
+
 # Toàn bộ
 all = ["pyrubberband>=0.3", "librosa>=0.10", "voxcpm"]
+
 # Dev / test
 dev = ["pytest", "pytest-cov", "black", "ruff"]
 
@@ -32,4 +42,5 @@ audio-stretch = "audio_stretch.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["audio_stretch*"]
+# include = ["audio_stretch*"]
+include = ["audio_stretch", "audio_stretch.*"]
