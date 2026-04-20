@@ -13,29 +13,18 @@ Thư viện Python để **thay đổi chiều dài âm thanh mà không mất n
 ## Cài đặt
 
 ```bash
-# Cài đặt cơ bản (chỉ stretch, không có TTS)
-pip install audio-stretch
-
-# Với thuật toán chất lượng cao (khuyến nghị)
-pip install "audio-stretch[rubberband]"
-
-# Với thuật toán librosa (fallback)
-pip install "audio-stretch[librosa]"
-
-# Với TTS VoxCPM2
-pip install "audio-stretch[tts]"
-
-# Tất cả tính năng
-pip install "audio-stretch[all]"
-
 # Cài đặt từ source
 pip install git+https://github.com/ntamvl/audio-stretch
 
 # hoặc
 git clone https://github.com/ntamvl/audio-stretch && cd audio-stretch
 pip install -e .
+
 # hoặc với dependencies đầy đủ
 pip install -e ".[rubberband,tts]"
+
+# hoặc
+pip install -e ".[all]"
 ```
 
 **After installation, quick check:**
